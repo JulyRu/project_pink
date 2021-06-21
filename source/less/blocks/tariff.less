@@ -1,0 +1,229 @@
+.tariff {
+  background-color: @light_gray;
+  padding: 77px 0 46px 0;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 20px 68px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 130px 96px 130px;
+  }
+}
+
+.tariff::before {
+  position: absolute;
+  content: "";
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: @light_gray;
+  transform: skewY(-4deg);
+
+  @media (min-width: @desktop-width) {
+    top: -50px;
+    transform: skewY(-5deg);
+  }
+}
+
+.tariff__container {
+  @media (min-width: @tablet-width) {
+    // padding: 0 20px 0 20px;
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    // padding: 0 130px 0 130px;
+    width: 940px;
+  }
+}
+
+.tariff__table {
+  background-color: @white;
+  border-spacing: 0;
+  width: 828px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 38px;
+  // width: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.tariff__table tr {
+  border: 2px solid @light_gray;
+}
+
+
+.tariff__cell {
+  // padding: 18px 19px;
+  padding: 13px 0 16px 20px;
+  border: 1px solid @light_gray;
+
+  @media (min-width: @tablet-width) {
+    width: 25%;
+    padding: 0;
+    height: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 25%;
+    padding: 0;
+    height: 59px;
+  }
+}
+
+.tariff__description {
+  background-color: @dark_blue;
+  border-right: 1px solid @gray;
+  border-left: 1px solid @gray;
+  padding: 12px 0 30px 0;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: @tablet-width) {
+    padding: 15px 0 10px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 15px 0 17px 0;
+  }
+}
+
+.tariff__name {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+  color: @white;
+  text-transform: uppercase;
+  margin: 0 0 -3px;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+}
+
+.tariff__price {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+  color: @white;
+  margin: 0;
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+  }
+}
+
+.tariff__hit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @white;
+  background-color: @red;
+  position: absolute;
+  transform: rotate(-45deg);
+  width: 110px;
+  height: 24px;
+  top: 17px;
+  left: -29px;
+
+  @media (min-width: @tablet-width) {
+    left: -35px;
+    height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: -25px;
+  }
+}
+
+.tariff__options {
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @dark_blue;
+
+  @media (min-width: @tablet-width) {
+    text-transform: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+  }
+}
+
+.tariff__options--none {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.tariff__notmobile {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    border: 1px solid @light_gray;
+    padding: 7px 0 0 16px;
+    height: 47px;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    border: 1px solid @light_gray;
+    padding: 15px 0 0 20px;
+    height: 60px;
+    box-sizing: border-box;
+  }
+}
+
+.tariff__notstyle {
+  @media (min-width: @tablet-width) {
+    border: none;
+    height: 82px;
+    background-color: @light_gray;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 94px;
+  }
+}
+
+.tariff__yes {
+  background: url("../img/svg/yes.svg") no-repeat;
+  background-position: right 7% bottom 55%;
+
+  @media (min-width: @tablet-width) {
+    background-position: right 50% bottom 55%;
+  }
+}
+
+.tariff__no {
+  background: url("../img/svg/no.svg") no-repeat;
+  background-position: right 7% bottom 65%;
+
+  @media (min-width: @tablet-width) {
+    background-position: right 50% bottom 55%;
+  }
+}
+
+.tariff__toggles {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
