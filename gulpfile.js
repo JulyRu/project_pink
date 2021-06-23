@@ -18,10 +18,7 @@ const path = require('path');
 
 // Styles
 
-function deploy(cb) {
-  ghPages.publish(path.join(process.cwd(), './build'), cb);
-}
-exports.deploy = deploy;
+
 
 const styles = () => {
   return gulp.src("source/less/style.less")
@@ -174,6 +171,11 @@ const build = gulp.series(
 );
 
 exports.build = build;
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
 
 // Default
 
