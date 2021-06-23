@@ -13,8 +13,15 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const sync = require("browser-sync").create();
+const ghPages = require('gh-pages');
+const path = require('path');
 
 // Styles
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
 
 const styles = () => {
   return gulp.src("source/less/style.less")
